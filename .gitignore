@@ -1,6 +1,0 @@
-node_modules/
-serviceAccountKey.json
-.env
-.eslintrc.js
-package-lock.json
-yarn.lock
