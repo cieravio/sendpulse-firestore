@@ -6,10 +6,10 @@ This project is an Express.js application integrated with Firebase Firestore, pr
 
 ### SETUP AND CONFIGURATION
 
-1. Firebase Admin SDK
+#### 1. Firebase Admin SDK
 The Firebase Admin SDK is initialized using a service account JSON file. Ensure the file serviceAccountKey.json is in the root of the project.
 
-2. Initialize Firebase Admin
+##### 2. Initialize Firebase Admin
 ```
   const serviceAccount = require("./serviceAccountKey.json");
 
