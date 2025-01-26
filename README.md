@@ -22,7 +22,7 @@ The Firebase Admin SDK is initialized using a service account JSON file. Ensure 
 Firestore is  initialized with the ignoredUndefinedProperties option enabled to prevent storing undefined values.
 ```javascript
 const db = admin.firestore();
-db.settings({ ignoredUndefinedProperties: true});
+db.settings({ ignoredUndefinedProperties: true });
 ```
 
 ### DEPENDENCIES
@@ -119,5 +119,5 @@ exports.app = functions.https.onRequest(app);
 
 To deploy, use:
 ```
-exports.app = functions.https.onRequest(app);
+firebase deploy --only functions
 ```
