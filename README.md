@@ -32,7 +32,7 @@ The project relies on the following dependencies:
 - firebase-admin: Firebase Admin SDK to interact with Firestore
 - firebase-functions: To deploy the Express app as a Firebase Cloud Function
 
-### API Endpoints
+### API ENDPOINTS
 
 #### 1. Root Endpoint
 - URL: `/`
@@ -91,3 +91,33 @@ Each document is identified by the `whatsapp_no` and has the following fields:
 - number1 (number)
 - number2 (number)
 - total (number, optional)
+
+### ERROR HANDLING
+
+#### 1. Create Document
+
+Logs errors when adding data fails
+```javascript
+console.error("Failed add data: ", error);
+res.status(500).send("Error!");
+```
+
+#### 2. Update Document
+
+Logs errors when update operations fail
+```javascript
+console.error("Error updating document: ", error);
+res.status(500).send("Error");
+```
+
+### DEPLOYMENT
+
+The application is deployed as a Firebase Cloud Function using:
+```javascript
+exports.app = functions.https.onRequest(app);
+```
+
+To deploy, use:
+```
+exports.app = functions.https.onRequest(app);
+```
